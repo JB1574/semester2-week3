@@ -9,7 +9,7 @@ The formula for the roots requires a square root operator.
 - In C this is provided as part of the math library `math.h`
 - You must include this library as part of your code
 - Add `#include <math.h>` after the line including `stdio.h`
-- The function is `sqrt(x)` which computes the positive square root.
+- The function is `sqrt(x)` which computes the positive square root of value x.
 
 Try compiling your program as usual. 
 - You will get a linking error due to the math function you are now using
@@ -50,7 +50,7 @@ When we combine int and float types this is generally OK
 - integers can be accurately converted to an equivalent float
 - and as long as we don't perform potentially inaccurate operations, eg. integer division
 
-if the final result is an int then accuracy can be lost
+If the final result is an int then accuracy can be lost
 - converting float to int requires rounding or truncation
 - you can write a small program to test which happens in practice
 
