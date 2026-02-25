@@ -3,8 +3,8 @@
 
 /*
  * Potrfolio submission
- * Name:
- * ID:
+ * Name: Joel Benjamin
+ * ID:201922915
  */
 #include <stdio.h>
  int main( void ) {
@@ -15,12 +15,21 @@
    float Tax_rate = 15;
 
     // calculate the deductions and final take-home salary
-   float NI_contribution = 
+   float NI_contribution = salary * (NI/100);
+   float salary_with_NI = salary - NI_contribution; // money left after ni contritibution
+   float money_left_tax = 0; // the money that is left that is to be taxed
+
+   if (salary_with_NI>12500) {
+      money_left_tax = salary_with_NI - 12500;
+   }
+
+   float tax_contribution = money_left_tax * (Tax_rate/100);
+   float take_home_salary = salary_with_NI - tax_contribution;
     // Use only these print statement with appropriate formatting and variable names
-    //printf("Salary £...",var_name);
-    //printf("NI contribution £...",var_name);
-    //printf("Tax contribution £...",var_name);
-    //printf("Take home salary £...",var_name);
+    printf("Salary £%.2f\n",salary);
+    printf("NI contribution £%.2f\n",NI_contribution);
+    printf("Tax contribution £%.2f\n",tax_contribution);
+    printf("Take home salary £%.2f\n",take_home_salary);
 
     return 0;
  }
